@@ -2,6 +2,37 @@
 
 ## Contract function
 
-Add what this function will do, its can be really short.
+<H1> BSC CONTRACT API </H1>
 
-Contract call `Buy_something`
+<H2> Call API </H2> 
+
+| Method name | Param | Return | Description | Trade related |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| `getPrice() ` | - | uint256 | get the curent pool state | Yes |
+| `getMaxTransaction() ` | - | uint256 | get max amount per transaction | Yes |
+| `getMinTransaction() ` | - | uint256 | get min amount per transaction | Yes |
+| `getEstimatedBuyReceiveAmount(uint256 amount)` | uint256 | uint256 | Returns the amount of trading token to receive | Yes |
+| `getEstimatedSellReceiveAmount(uint256 amount)` | uint256 | uint256 | Returns the amount of base token to receive | Yes |
+| `pendingFeeEarn()` | - | uint256 | Return amount of UP token the user can claim | No |
+| `getMaxRatio()` | - | uint256 | %Max amount per trade | Yes |
+| `getSTATE()` | - | uint256 | If the pair is open for trading:[0 - close , 1 - open] | Yes |
+| `getSeedBuyRate()` | - | uint256 | Rebates %[Out of 100000] | Yes |
+| `getFEE()` | - | uint256 | %FEE for the pair[Out of 100000] | Yes |
+| `totalSupply()` | - | uint256 | Return Total Supply of liquidity token | No |
+| `balanceOf(address owner)` | address | uint256 | Return user liquidity balance | No |
+| `name()` | - | string | Return Liquidity name Symbol | No |
+| `symbol()` | - | string | Return Liquidity Token Symbol | No |
+| `decimals()` | - | uint28 | Return Liquidity Token Decimals | No |
+
+
+<H2> Send API </H2> 
+
+| Method name | Param | Return | Call Value? | Description | Trade related | Payable
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| `Buy` | address | uint256 | Yes | Yes | When a user  buys a trading token.Example UP/TRX, a user would like to BUY UP using 1 TRX param would be user account address, call value would be 1 TRX | True |
+| `Sell` | uint256 | uint256 | - | Yes | When a user sells a trading token.Example UP/TRX, a user would like to SELL 10 UP.The webapp *must( send an approval before executing sell function. Param would be 1e19[Up has 18 decimals we are selling 10 UP]| True |
+| `DepositSupply` | - | uint256 | Yes | No | For Liquidity Providers to deposit their tokens approval/allowance must be given before trigerring this function | 
+| `WithdrawSupply` | uint256 | bool | - | No | Liquidity providers to withdraw their liquidity | True |
+| `ClaimFee` | - | uint256 | - | No | Liquidity providers to claim the UP fees earn from the smart contract |  True |
+
+
