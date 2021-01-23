@@ -29,10 +29,10 @@
 
 | Method name | Param | Return | Call Value? | Description | Trade related | Payable
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| `Buy` | address | uint256 | Yes | Yes | When a user  buys a trading token.Example UP/TRX, a user would like to BUY UP using 1 TRX param would be user account address, call value would be 1 TRX | True |
-| `Sell` | uint256 | uint256 | - | Yes | When a user sells a trading token.Example UP/TRX, a user would like to SELL 10 UP.The webapp *must( send an approval before executing sell function. Param would be 1e19[Up has 18 decimals we are selling 10 UP]| True |
-| `DepositSupply` | - | uint256 | Yes | No | For Liquidity Providers to deposit their tokens approval/allowance must be given before trigerring this function | 
-| `WithdrawSupply` | uint256 | bool | - | No | Liquidity providers to withdraw their liquidity | True |
-| `ClaimFee` | - | uint256 | - | No | Liquidity providers to claim the UP fees earn from the smart contract |  True |
+| `Buy` | address | uint256 | Yes | Yes |   True |When a user  buys a trading token.Example UP/TRX, a user would like to BUY UP using 1 TRX param would be user account address, call value would be 1 TRX |
+| `Sell` | uint256 | uint256 | - | Yes |  False | When a user sells a trading token.Example UP/TRX, a user would like to SELL 10 UP.The webapp *must( send an approval before executing sell function. Param would be 1e19[Up has 18 decimals we are selling 10 UP]| 
+| `DepositSupply` | - | uint256 | Yes | No |  True | For Liquidity Providers to deposit their tokens approval/allowance must be given before trigerring this function | 
+| `WithdrawSupply` | uint256 | bool | - | No |   False |Liquidity providers to withdraw their liquidity | 
+| `ClaimFee` | - | uint256 | - | No |  False |Liquidity providers to claim the UP fees earn from the smart contract |
 
 
