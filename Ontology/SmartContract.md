@@ -11,7 +11,7 @@
 | `getPrice() ` | - | int| get the curent pool state | Yes |
 | `getMaxTransaction() ` | - | int| | get max amount per transaction | Yes |
 | `getMinTransaction() ` | - | int| | get min amount per transaction | Yes |
-| `getEstimatedBuyReceiveAmount(int| )` | int| | int| | Returns the amount of trading token to receive | Yes |
+| `getEstimatedBuyReceiveAmount(int)` | int| | int| | Returns the amount of trading token to receive | Yes |
 | `getEstimatedSellReceiveAmount(int)` | int| | int| | Returns the amount of base token to receive | Yes |
 | `pendingFeeEarn()` | address | int| | Return amount of UP token the user can claim | No |
 | `getMaxRatio()` | - | int| | %Max amount per trade | Yes |
