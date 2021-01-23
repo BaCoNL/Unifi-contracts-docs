@@ -1,8 +1,8 @@
-# Tron Unifi difi contract Documentation
+# Harmony Unifi difi contract Documentation
 
 ## Contract function
 
-<H1> TRON CONTRACT API </H1>
+<H1> Harmony CONTRACT API </H1>
 
 <H2> Call API </H2> 
 
@@ -27,12 +27,12 @@
 
 <H2> Send API </H2> 
 
-| Method name | Param | Return | Payable | Description |
-| ------------- | ------------- | ------------- | ------------- | ------------- | 
-| `Buy` | address | uint256 | Yes  |When a user  buys a trading token.Example UP/TRX, a user would like to BUY UP using 1 TRX param would be user account address, call value would be 1 TRX |
-| `Sell` | uint256 | uint256 | No  | When a user sells a trading token.Example UP/TRX, a user would like to SELL 10 UP.The webapp *must( send an approval before executing sell function. Param would be 1e19[Up has 18 decimals we are selling 10 UP]| 
-| `DepositSupply` | - | uint256 | Yes | For Liquidity Providers to deposit their tokens approval/allowance must be given before trigerring this function | 
-| `WithdrawSupply` | uint256 | bool | No |   False |Liquidity providers to withdraw their liquidity | 
-| `ClaimFee` | - | uint256 | - | No  |Liquidity providers to claim the UP fees earn from the smart contract |
+| Method name | Param | Return | Payable| Description |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| `Buy` | address | uint256 | Yes |   True |When a user  buys a trading token.Example UP/ONE, a user would like to BUY UP using 1 ONE param would be user account address, call value would be 1 ONE|
+| `Sell` | uint256 | uint256 | No | When a user sells a trading token.Example UP/ONE, a user would like to SELL 10 UP.The webapp *must( send an approval before executing sell function. Param would be 1e19[Up has 18 decimals we are selling 10 UP]| 
+| `DepositSupply` | - | uint256 | Yes | No |  True | For Liquidity Providers to deposit their tokens approval/allowance must be given before trigerring this function | 
+| `WithdrawSupply` | uint256 | bool | - | No |   False |Liquidity providers to withdraw their liquidity | 
+| `ClaimFee` | - | uint256 | - | No |  False |Liquidity providers to claim the UP fees earn from the smart contract |
 
 
