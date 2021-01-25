@@ -28,7 +28,7 @@
 <H2> Send API </H2> 
 
 | Method name | Param | Return  | Trade related  | Description 
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
 | `Buy` | address,int amount | int| Yes | When a user  buys a trading token.Example UP/ONTd, a user would like to BUY UP using 1 ONTd param would be user account address, call value would be 1 ONTd
 | `Sell` | address,int amount| int| Yes | When a user sells a trading token.Example UP/ONTd, a user would like to SELL 10 UP.The webapp *must( send an approval before executing sell function. Param would be 1e19[Up has 18 decimals we are selling 10 UP]| 
 | `DepositSupply` | address,int amount| int| | No | For Liquidity Providers to deposit their tokens approval/allowance must be given before trigerring this function | 
